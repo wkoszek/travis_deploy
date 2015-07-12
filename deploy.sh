@@ -13,7 +13,7 @@ echo "#   deploy URL      : '${DEPLOY_LOCATION}'"
 echo "============================================================================="
 
 K=encrypted_${DEPLOY_KEY}_key
-IV=encrypted_${DEPLOY_KEY}_key
+IV=encrypted_${DEPLOY_KEY}_iv
 
 TMPDIR=/tmp/deploy
 rm -rf $TMPDIR
