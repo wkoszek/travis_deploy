@@ -21,7 +21,8 @@ mkdir -p $TMPDIR
 
 KEYFN=${TMPDIR}/travis
 
-echo "# K=$K IV=${IV}"
+echo "# K=$K IV=${IV} KEYFN=${KEYFN}"
+echo "# K=${!K} IV=${!IV} KEYFN=${KEYFN}"
 
 openssl aes-256-cbc -K "${!K}" -iv "${!IV}" -in ${DEPLOY_FILE}.enc -out ${KEYFN} -d
 
