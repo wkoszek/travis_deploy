@@ -23,6 +23,7 @@ rm -rf $TMPDIR
 mkdir -p $TMPDIR
 
 KEYFN=${TMPDIR}/travis
+chmod 600 $KEYFN
 
 echo "# K=$K IV=${IV} KEYFN=${KEYFN}"
 
