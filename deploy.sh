@@ -23,8 +23,6 @@ KEYFN=${TMPDIR}/travis
 
 echo "# K=$K IV=${IV}"
 
-openssl aes-256-cbc -K "$K" -iv "$IV" -in ${DEPLOY_FILE}.enc -out ${KEYFN} -d
+openssl aes-256-cbc -K "${!K}" -iv "${!IV}" -in ${DEPLOY_FILE}.enc -out ${KEYFN} -d
 
-ls -la
-
-scp -B -i ${KEYFN} ${DEPLOY_RESOURCE} ${DEPLOY_HOST}:${DEPLOY_LOCATION}
+scp -o StrictHostKeyChecking=no -i ${KEYFN} ${DEPLOY_RESOURCE} ${DEPLOY_HOST}:${DEPLOY_LOCATION}
