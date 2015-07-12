@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Copyright (c) 2015 Wojciech A. Koszek <wojciech@koszek.com>
 
 DEPLOY_RESOURCE=$1
