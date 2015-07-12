@@ -1,7 +1,7 @@
 #!/bin/sh
 # Copyright (c) 2015 Wojciech A. Koszek <wojciech@koszek.com>
 
-DEPLOY_FILE=$1
+DEPLOY_RESOURCE=$1
 
 echo "============================================================================="
 echo "# deployment started:"
