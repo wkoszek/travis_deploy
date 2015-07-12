@@ -21,6 +21,6 @@ mkdir -p $TMPDIR
 
 KEYFN=${TMPDIR}/travis
 
-openssl aes-256-cbc -K $K -iv $IV -in ${DEPLOY_REPO}.env -out ${KEYFN} -d
+openssl aes-256-cbc -K $K -iv $IV -in ${DEPLOY_REPO}.enc -out ${KEYFN} -d
 
 scp -i ${KEYFN} ${DEPLOY_FILE} ${DEPLOY_HOST}:${DEPLOY_LOCATION}
