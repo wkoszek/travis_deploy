@@ -1,0 +1,4 @@
+env:
+  global:
+    DEPLOY_HOST=55a1cc835004460171000096@builds-koszek.rhcloud.com
+    DEPLOY_LOCATION=app-root/runtime/repo/
