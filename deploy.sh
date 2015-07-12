@@ -23,10 +23,7 @@ rm -rf $TMPDIR
 mkdir -p $TMPDIR
 
 KEYFN=${TMPDIR}/travis
-chmod 600 $KEYFN
-
-echo "# K=$K IV=${IV} KEYFN=${KEYFN}"
-
 openssl aes-256-cbc -K "${K}" -iv "${IV}" -in ${DEPLOY_FILE}.enc -out ${KEYFN} -d
+chmod 600 $KEYFN
 
 scp -o StrictHostKeyChecking=no -i ${KEYFN} ${DEPLOY_RESOURCE} ${DEPLOY_HOST}:${DEPLOY_LOCATION}
