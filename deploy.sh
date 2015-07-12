@@ -4,6 +4,13 @@
 DEPLOY_RESOURCE=$1
 
 echo "============================================================================="
+echo "# env:"
+env
+echo "# printenv:"
+printenv
+echo "============================================================================="
+
+echo "============================================================================="
 echo "# deployment started:"
 echo "#   deploy repo file: '${DEPLOY_FILE}'"
 echo "#   deploy resource : '${DEPLOY_RESOURCE}'"
