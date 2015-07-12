@@ -23,4 +23,4 @@ KEYFN=${TMPDIR}/travis
 
 openssl aes-256-cbc -K $K -iv $IV -in ${DEPLOY_FILE}.enc -out ${KEYFN} -d
 
-scp -i ${KEYFN} ${DEPLOY_RESOURCE} ${DEPLOY_HOST}:${DEPLOY_LOCATION}
+scp -B -i ${KEYFN} ${DEPLOY_RESOURCE} ${DEPLOY_HOST}:${DEPLOY_LOCATION}
