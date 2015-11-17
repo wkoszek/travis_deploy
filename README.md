@@ -8,6 +8,10 @@ around.
 	travis init
 	travis settings -s yes builds_only_with_travis_yml
 
+Debugging Travis:
+
+	dpkg -l
+
 # Author
 
 - Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
